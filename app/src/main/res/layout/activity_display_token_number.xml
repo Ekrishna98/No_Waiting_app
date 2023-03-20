@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Display_TokenNumber">
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="128dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="Noo"
+            android:textColor="#D6201C"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Waiting"
+            android:textColor="#1335F3"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/result_token"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="100dp"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Token"
+                android:textColor="#1335F3"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/YourToken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="40"
+                android:textColor="#2E7D32"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/RunningToken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Running Token"
+                android:textSize="25sp"
+                android:textColor="#D6201C"/>
+            <TextView
+                android:id="@+id/RunningTokenValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="32"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textColor="#F30B06"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/alertText"
+        android:layout_marginTop="80dp"
+        android:layout_below="@id/result_token"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your are next in the Queue"
+        android:textSize="20sp"
+        android:textColor="#F30B06"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/QRCodeDetails"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/alertText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AIG Hospitals - Pharmacy "
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:gravity="center"/>
+
+</RelativeLayout>
