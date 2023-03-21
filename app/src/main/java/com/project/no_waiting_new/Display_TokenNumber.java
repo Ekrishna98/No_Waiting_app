@@ -21,5 +21,22 @@ public class Display_TokenNumber extends AppCompatActivity {
         RunningToken = i.getStringExtra("Result");
         QRCodeDetails = findViewById(R.id.QRCodeDetails);
         QRCodeDetails.setText(RunningToken);
+
+        Thread t = new Thread(){
+            public void run(){
+                try{
+                    sleep(6000);
+                }
+                catch(Exception e){
+                    e.printStackTrace();
+                }
+                finally {
+                    startActivity(new Intent(Display_TokenNumber.this,Successful_Screen.class));
+                    finish();
+                }
+            }
+
+        };t.start();
+
     }
 }

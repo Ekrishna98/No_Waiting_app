@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Display_TokenNumber">
 
+
     <LinearLayout
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="128dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -23,6 +25,7 @@
             android:textColor="#D6201C"
             android:textSize="30sp"
             android:textStyle="bold" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,10 +40,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/title"
-        android:layout_marginTop="100dp"
-        android:weightSum="2"
         android:orientation="horizontal"
-        >
+        android:weightSum="2"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/title">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -65,50 +68,57 @@
                 android:textSize="40sp"
                 android:textStyle="bold" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
+
             <TextView
                 android:id="@+id/RunningToken"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Running Token"
-                android:textSize="25sp"
-                android:textColor="#D6201C"/>
+                android:textColor="#D6201C"
+                android:textSize="25sp" />
+
             <TextView
                 android:id="@+id/RunningTokenValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="32"
+                android:textColor="#F30B06"
                 android:textSize="40sp"
-                android:textStyle="bold"
-                android:textColor="#F30B06"/>
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 
     <TextView
         android:id="@+id/alertText"
-        android:layout_marginTop="80dp"
-        android:layout_below="@id/result_token"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/result_token"
+        android:gravity="center"
         android:text="Your are next in the Queue"
-        android:textSize="20sp"
         android:textColor="#F30B06"
-        android:gravity="center"/>
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result_token" />
 
     <TextView
         android:id="@+id/QRCodeDetails"
-        android:layout_marginTop="30dp"
-        android:layout_below="@id/alertText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="AIG Hospitals - Pharmacy "
-        android:textSize="25sp"
         android:textColor="@color/black"
-        android:gravity="center"/>
+        android:textSize="25sp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/alertText"
+         />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

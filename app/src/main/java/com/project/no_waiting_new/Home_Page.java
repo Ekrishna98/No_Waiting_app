@@ -89,6 +89,7 @@ public class Home_Page extends AppCompatActivity {
 
                             Intent intent = new Intent(Home_Page.this, ScanActivity.class);
                             startActivity(intent);
+                            finish();
 //
                         }
                         if (multiplePermissionsReport.isAnyPermissionPermanentlyDenied()) {

@@ -68,4 +68,10 @@ public class ScanActivity extends AppCompatActivity {
         super.onResume();
         codeScanner.startPreview();
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(ScanActivity.this,Home_Page.class));
+    }
 }
