@@ -15,7 +15,7 @@ public class Successful_Screen extends AppCompatActivity {
         Thread t = new Thread(){
             public void run(){
                 try{
-                    sleep(10000);
+                    sleep(6000);
                 }
                 catch(Exception e){
                     e.printStackTrace();

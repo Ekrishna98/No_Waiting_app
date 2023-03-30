@@ -3,11 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
 
     <application
         android:allowBackup="true"
@@ -19,17 +28,29 @@
         android:theme="@style/Theme.No_Waiting_New"
         tools:targetApi="31">
         <activity
-            android:name=".Successful_Screen"
+            android:name=".BC_Screens.BC_DashBoard_Screen"
             android:exported="false" />
+        <activity
+            android:name=".BC_Screens.BC_Login"
+            android:exported="false" />
+        <activity android:name=".Organization_Screens.Organization_Login"
+            android:exported="false"/>
+        <activity
+            android:name=".Successful_Screen"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Display_TokenNumber"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ScanActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Home_Page"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
