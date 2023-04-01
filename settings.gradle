@@ -14,5 +14,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "no_Waiting_New"
+rootProject.name = "no_Waiting"
 include ':app'

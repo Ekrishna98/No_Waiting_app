@@ -1,4 +1,4 @@
-package com.project.no_waiting_new;
+package com.project.no_waiting;
 
 import org.junit.Test;
 

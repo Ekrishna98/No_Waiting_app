@@ -1,4 +1,4 @@
-package com.project.no_waiting_new;
+package com.project.no_waiting;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -25,9 +25,9 @@ import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
-import com.project.no_waiting_new.BC_Screens.BC_DashBoard_Screen;
-import com.project.no_waiting_new.BC_Screens.BC_Login;
-import com.project.no_waiting_new.Organization_Screens.Organization_Login;
+import com.project.no_waiting.BC_Screens.BC_Login;
+import com.project.no_waiting.Organization_Screens.Org_Login;
+import com.project.no_waiting.Organization_Screens.Org_Register;
 
 import java.util.List;
 
@@ -63,7 +63,7 @@ public class Home_Page extends AppCompatActivity {
         TestButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Home_Page.this, BC_Login.class));
+                startActivity(new Intent(Home_Page.this, Org_Register.class));
                 finish();
             }
         });
@@ -101,7 +101,7 @@ public class Home_Page extends AppCompatActivity {
                         finish();
                         break;
                     case R.id.Org_Login:
-                        startActivity(new Intent(Home_Page.this, Organization_Login.class));
+                        startActivity(new Intent(Home_Page.this, Org_Login.class));
 //                        Toast.makeText(Home_Page.this, "Organization_Login open", Toast.LENGTH_SHORT).show();
                         drawer.closeDrawer(GravityCompat.START);
                         finish();

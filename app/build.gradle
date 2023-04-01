@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.project.no_waiting_new'
+    namespace 'com.project.no_waiting'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.project.no_waiting_new"
+        applicationId "com.project.no_waiting"
         minSdk 29
         targetSdk 33
         versionCode 1
@@ -29,13 +29,7 @@ android {
     buildFeatures {
         viewBinding true
     }
-    sourceSets {
-        main {
-            res {
-                srcDirs 'src\\main\\res', 'src\\main\\res\\2'
-            }
-        }
-    }
+
 }
 
 dependencies {
@@ -49,13 +43,12 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-
-    implementation 'com.google.android.gms:play-services-code-scanner:16.0.0-beta3'
-    implementation 'com.google.mlkit:barcode-scanning:17.0.3'
-
     implementation "com.google.accompanist:accompanist-permissions:0.28.0"
 
+    // QR_Scanner Libraries
     implementation 'com.budiyev.android:code-scanner:2.1.0'
+
+    // Request Runtime permissions
     implementation 'com.karumi:dexter:6.2.3'
 
     implementation "com.airbnb.android:lottie:5.2.0"

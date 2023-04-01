@@ -25,16 +25,29 @@
         android:icon="@mipmap/no_waiting_icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:screenOrientation="portrait"
         android:theme="@style/Theme.No_Waiting_New"
         tools:targetApi="31">
+
+        <activity
+            android:name=".Organization_Screens.Org_Login"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Organization_Screens.Org_Register"
+            android:exported="false"
+            android:theme="@style/Theme.No_Waiting_New.NoActionBar"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
         <activity
             android:name=".BC_Screens.BC_DashBoard_Screen"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".BC_Screens.BC_Login"
-            android:exported="false" />
-        <activity android:name=".Organization_Screens.Organization_Login"
-            android:exported="false"/>
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
         <activity
             android:name=".Successful_Screen"
             android:exported="false"
@@ -50,17 +63,15 @@
         <activity
             android:name=".Home_Page"
             android:exported="true"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.No_Waiting_New"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <meta-data
-            android:name="com.google.mlkit.vision.DEPENDENCIES"
-            android:value="barcode_ui" />
     </application>
 
 </manifest>

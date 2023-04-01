@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">no_Waiting_New</string>
+    <string name="app_name">No Waiting</string>
     <string name="title_NO">Noo</string>
     <string name="title_Waiting">Waiting</string>
     <string name="Get_Token_Btn">Get Your Token</string>
@@ -10,9 +10,12 @@
     <string name="username">Mobile/Username</string>
     <string name="password">Enter your Password</string>
     <string name="login">Login</string>
-
-
-
+    <string name="forgot">Submit</string>
+    <string name="Register">Register Here</string>
+    <string name="forgot_password">Forgot-password</string>
+    <string name="Org_Login">Organization_Login</string>
+    <string name="Org_Register">Register</string>
+    <string name="Org_Registration">Register Your Organization</string>
 
 
 </resources>
