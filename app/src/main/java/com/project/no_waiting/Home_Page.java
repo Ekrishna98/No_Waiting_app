@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -18,7 +17,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-
 import com.google.android.material.navigation.NavigationView;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
@@ -26,13 +24,11 @@ import com.karumi.dexter.PermissionToken;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 import com.project.no_waiting.BC_Screens.BC_Login;
+import com.project.no_waiting.Organization_Screens.Org_DashBoard;
 import com.project.no_waiting.Organization_Screens.Org_Login;
-import com.project.no_waiting.Organization_Screens.Org_Register;
-
 import java.util.List;
 
 public class Home_Page extends AppCompatActivity {
-
     String QRresult;
     Button scanButton, TestButton;
     private ActionBarDrawerToggle toggle;
@@ -46,6 +42,7 @@ public class Home_Page extends AppCompatActivity {
 
         inits();
 
+        // NightMode off
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         scanButton.setOnClickListener(new View.OnClickListener() {
@@ -63,7 +60,7 @@ public class Home_Page extends AppCompatActivity {
         TestButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Home_Page.this, Org_Register.class));
+                startActivity(new Intent(Home_Page.this, Org_DashBoard.class));
                 finish();
             }
         });
@@ -96,13 +93,11 @@ public class Home_Page extends AppCompatActivity {
                 {
                     case R.id.BCExecutives:
                         startActivity(new Intent(Home_Page.this,BC_Login.class));
-//                        Toast.makeText(Home_Page.this, "BC-Executives open", Toast.LENGTH_SHORT).show();
                         drawer.closeDrawer(GravityCompat.START);
                         finish();
                         break;
                     case R.id.Org_Login:
                         startActivity(new Intent(Home_Page.this, Org_Login.class));
-//                        Toast.makeText(Home_Page.this, "Organization_Login open", Toast.LENGTH_SHORT).show();
                         drawer.closeDrawer(GravityCompat.START);
                         finish();
                         break;
@@ -115,9 +110,7 @@ public class Home_Page extends AppCompatActivity {
                 return true;
             }
         });
-
     }
-
 
     private void requestPermission() {
         Dexter.withActivity(this)
@@ -126,7 +119,6 @@ public class Home_Page extends AppCompatActivity {
                     @Override
                     public void onPermissionsChecked(MultiplePermissionsReport report) {
                         if (report.areAllPermissionsGranted()) {
-//                            Toast.makeText(MainActivity.this, "", Toast.LENGTH_SHORT).show();
 
                         } else if (report.isAnyPermissionPermanentlyDenied()) {
                             Toast.makeText(Home_Page.this, "Camera Permission Required!...", Toast.LENGTH_SHORT).show();
@@ -190,8 +182,6 @@ public class Home_Page extends AppCompatActivity {
     }
 
 
-
-
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(toggle.onOptionsItemSelected(item)){
@@ -201,13 +191,13 @@ public class Home_Page extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onBackPressed() {
-        if(drawer.isDrawerOpen(GravityCompat.START)){
-            drawer.closeDrawer(GravityCompat.START);
-        }else {
-            super.onBackPressed();
-        }
-
-    }
+//    @Override
+//    public void onBackPressed() {
+//        if(drawer.isDrawerOpen(GravityCompat.START)){
+//            drawer.closeDrawer(GravityCompat.START);
+//        }else {
+//            super.onBackPressed();
+//        }
+//
+//    }
 }

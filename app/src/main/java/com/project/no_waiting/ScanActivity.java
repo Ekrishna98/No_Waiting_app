@@ -2,21 +2,17 @@ package com.project.no_waiting;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.util.Log;
-
 import com.budiyev.android.codescanner.CodeScanner;
 import com.budiyev.android.codescanner.CodeScannerView;
 import com.budiyev.android.codescanner.DecodeCallback;
 import com.google.zxing.Result;
 
 public class ScanActivity extends AppCompatActivity {
-
-
     CodeScanner codeScanner;
     CodeScannerView scannerView1;
     Vibrator vibrate;
@@ -35,16 +31,8 @@ public class ScanActivity extends AppCompatActivity {
 //        codeScanner.startPreview();
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        setTitle("QRcode Scanner");
-
-
-//        scannerView1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                codeScanner.startPreview();
-//            }
-//        });
-
+        setTitle("QRCode Scanner");
+//            getSupportActionBar().hide();
 
         codeScanner.setDecodeCallback(new DecodeCallback() {
             @Override
@@ -67,7 +55,6 @@ public class ScanActivity extends AppCompatActivity {
             }
         });
     }
-
 
     @Override
     protected void onStart() {

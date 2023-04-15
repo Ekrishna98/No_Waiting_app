@@ -1,7 +1,6 @@
 package com.project.no_waiting;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.animation.AlphaAnimation;
@@ -9,9 +8,7 @@ import android.view.animation.Animation;
 import android.widget.TextView;
 
 public class Display_TokenNumber extends AppCompatActivity {
-
     String RunningToken;
-
     TextView QRCodeDetails, RunningTokenValue;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +32,9 @@ public class Display_TokenNumber extends AppCompatActivity {
 
         SuccessScreen();
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setTitle("Display TokenNumber");
+
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     private void SuccessScreen() {

@@ -11,11 +11,15 @@
     <string name="password">Enter your Password</string>
     <string name="login">Login</string>
     <string name="forgot">Submit</string>
+    <string name="submit">Submit</string>
     <string name="Register">Register Here</string>
     <string name="forgot_password">Forgot-password</string>
     <string name="Org_Login">Organization_Login</string>
     <string name="Org_Register">Register</string>
     <string name="Org_Registration">Register Your Organization</string>
+
+    <string name="select">Select Domain/Sector</string>
+    <string name="generate_qrcode">Generate QRCode</string>
 
 
 </resources>

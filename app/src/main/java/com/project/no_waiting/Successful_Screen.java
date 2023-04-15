@@ -6,11 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 
 public class Successful_Screen extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_successful_screen);
+
+        setTitle("Successful");
 
         Thread t = new Thread(){
             public void run(){
