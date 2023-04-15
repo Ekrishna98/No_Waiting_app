@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EAE3D2"
+    tools:context=".BC_Screens.BC_Login">
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="Noo"
+            android:textColor="#D6201C"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Waiting"
+            android:textColor="#1335F3"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BC_Login"
+        android:textSize="25sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="50dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Login_View"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="30dp"
+        android:layout_margin="25dp"
+        app:cardElevation="20dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/username"
+                android:textSize="18sp"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edit_txt_shape"
+                android:textSize="22sp"
+                android:drawableLeft="@drawable/person_black"
+                android:drawablePadding="5dp"
+                android:layout_marginTop="5dp"
+                android:hint="@string/username"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="password"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edit_txt_shape"
+                android:textSize="22sp"
+                android:drawableLeft="@drawable/lock"
+                android:drawablePadding="5dp"
+                android:layout_marginTop="5dp"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@+id/BC_Login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:backgroundTint="#E91E63"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                app:cornerRadius="10dp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/BC_NumberView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:visibility="gone"
+        android:layout_margin="25dp"
+        app:cardElevation="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Billing Counter "
+            android:textAlignment="center"
+            android:textSize="20sp"/>
+        <Spinner
+            android:id="@+id/Select_BCNumber"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/arrow_drop_down"
+            />
+
+            <Button
+                android:id="@+id/BC_Number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/submit"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:backgroundTint="#E91E63"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                app:cornerRadius="10dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

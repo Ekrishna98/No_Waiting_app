@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item
+            android:id="@+id/BCExecutives"
+            android:icon="@drawable/person_black"
+            android:title="BC Executives"/>
+        <item
+            android:id="@+id/Org_Login"
+            android:icon="@drawable/supervised_user"
+            android:title="Organization Login"/>
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/logout1"
+            android:title="LogOut"/>
+
+    </group>
+
+</menu>
